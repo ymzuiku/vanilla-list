@@ -8,5 +8,5 @@ interface IList {
 export interface IListState {
     stopAppend: boolean;
 }
-declare const List: ({ render, itemCount, loadCount, layout }: IList) => HTMLDivElement;
-export default List;
+declare const vanillaList: ({ render, itemCount, loadCount, layout }: IList) => HTMLDivElement;
+export default vanillaList;

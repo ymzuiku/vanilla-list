@@ -11,7 +11,7 @@ export interface IListState {
   stopAppend: boolean;
 }
 
-const List = ({ render, itemCount, loadCount = 15, layout = 'vertical' }: IList) => {
+const vanillaList = ({ render, itemCount, loadCount = 15, layout = 'vertical' }: IList) => {
   const box = document.createElement('div');
   // 使用relative+absolute 包裹一层，可以解决 grid 导致的scroll之后，当容器中的对象触发重排之后，会自动scrollTop=0的状况
   box.style.position = 'relative';
@@ -69,4 +69,4 @@ const List = ({ render, itemCount, loadCount = 15, layout = 'vertical' }: IList)
   return box;
 };
 
-export default List;
+export default vanillaList;
