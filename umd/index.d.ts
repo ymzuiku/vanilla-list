@@ -1,5 +1,5 @@
 export declare type IListRender = (index: number) => any;
-interface IList {
+export interface IVanillaList {
     itemCount: number;
     layout?: 'horizontal' | 'vertical';
     loadCount?: number;
@@ -8,5 +8,5 @@ interface IList {
 export interface IListState {
     stopAppend: boolean;
 }
-declare const vanillaList: ({ render, itemCount, loadCount, layout }: IList) => HTMLDivElement;
+declare const vanillaList: ({ render, itemCount, loadCount, layout }: IVanillaList) => HTMLDivElement;
 export default vanillaList;
