@@ -16,9 +16,12 @@ import List from 'vanilla-list';
 const list = List({
   itemCount: 20000,
   render: index => {
-    return $('div').$text('aa-' + index);
+    const text = document.createElement('div');
+    text.textContent = 'item-' + index;
+    return text;
   },
 });
+
 list.style.height = '200px';
 
 document.body.append(list);
